@@ -1,4 +1,4 @@
-# simple-crud-app
+# simple-crm-app
 
 ## Introduction
 This project is a simple CRUD Java-based web application. It serves for the purpose of investigating and studying web programming based on Java technologies and Spring framework. This web-app is written based on RESTful style with basic API listed in the table below. Regarding database perspective, MySQL and Hibernate are adopted to persist data during executing the web-app.
