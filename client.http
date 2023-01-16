@@ -11,9 +11,9 @@ POST localhost:8080/api/customers
 Content-Type: application/json
 
 {
-  "firstName": "Joe",
+  "firstName": "Jax",
   "lastName": "Doe",
-  "email": "joe.doe@mail.com"
+  "email": "jax.doe@mail.com"
 }
 
 ### Send PUT request with json body
@@ -28,4 +28,4 @@ Content-Type: application/json
 }
 
 ### DELETE request for a customer with id = 3
-DELETE localhost:8080/api/customers/3
+DELETE localhost:8080/api/customers/2
