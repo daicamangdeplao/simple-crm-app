@@ -37,3 +37,5 @@ hs_err_pid*
 file-system*
 /.gradle/
 /build/
+/.vscode/
+/bin/
