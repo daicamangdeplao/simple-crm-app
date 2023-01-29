@@ -1,13 +1,13 @@
 ### GET request for all customers
-GET localhost:8080/api/customers
+GET http://localhost:8080/api/customers
 Accept: application/json
 
 ### GET request for a customer with id = 1
-GET localhost:8080/api/customers/1
+GET http://localhost:8080/api/customers/1
 Accept: application/json
 
 ### Send POST request with json body
-POST localhost:8080/api/customers
+POST http://localhost:8080/api/customers
 Content-Type: application/json
 
 {
@@ -17,7 +17,7 @@ Content-Type: application/json
 }
 
 ### Send PUT request with json body
-PUT localhost:8080/api/customers
+PUT http://localhost:8080/api/customers
 Content-Type: application/json
 
 {
@@ -28,4 +28,4 @@ Content-Type: application/json
 }
 
 ### DELETE request for a customer with id = 3
-DELETE localhost:8080/api/customers/2
+DELETE http://localhost:8080/api/customers/2

@@ -51,3 +51,9 @@ sourceCompatibility = '17'
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+// handle the error: Entry BOOT-INF/lib/jaxb-core-4.0.1.jar is a duplicate but no duplicate handling strategy has been set.
+// solution: https://github.com/spring-projects/spring-boot/issues/33659
+tasks.named('bootJar') {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
