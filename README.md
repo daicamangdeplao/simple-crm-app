@@ -10,8 +10,8 @@
 
 ## Start up
 
-1. Set up network `simple-net` (you need to figure out by your self)
-2. Setup database by locating to `.\config` and run `docker-compose-up`
+1. Set up network `simple-net` (you need to figure out by yourself)
+2. Setup database by locating to `.\config` and run `docker-compose up`
 3. Build docker image and run
 
 ``` bash
