@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+
+    environment {
+        GRADLE = 'chmod u+x gradlew && ./gradlew --no-daemon'
+    }
+    stages {
+        stage('Unit Test') {
+            steps {
+                sh "${GRADLE} test"
+            }
+        }
+        stage('Build') {
+            steps {
+                sh './gradlew clean build'
+            }
+        }
+    }
+}
+
