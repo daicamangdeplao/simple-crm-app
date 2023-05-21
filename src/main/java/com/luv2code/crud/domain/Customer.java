@@ -9,7 +9,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Entity(name = "customers")
 @Data
 @Builder(toBuilder = true)
@@ -17,25 +16,20 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Customer {
 
-	@Id
-	@GeneratedValue(strategy= GenerationType.IDENTITY)
-	private int id;
-	
-	private String firstName;
-	
-	private String lastName;
-	
-	private String email;
-	
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
-	@Override
-	public String toString() {
-		return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
-	}
-		
+    private String firstName;
+
+    private String lastName;
+
+    private String email;
+
+
+    @Override
+    public String toString() {
+        return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
+    }
+
 }
-
-
-
-
-

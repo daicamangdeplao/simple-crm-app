@@ -15,40 +15,40 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(path = "/api", produces = "application/json")
 public class CustomerRestController {
 
-	private final CustomerService customerService;
+    private final CustomerService customerService;
 
-	public CustomerRestController(CustomerService customerService) {
-		this.customerService = customerService;
-	}
+    public CustomerRestController(CustomerService customerService) {
+        this.customerService = customerService;
+    }
 
-	@GetMapping("/customers")
-	public List<CustomerDTO> getCustomers() {
-		return customerService.getCustomers().stream()
-				.map(CustomerDTO::fromCustomer)
-				.toList();
-	}
+    @GetMapping("/customers")
+    public List<CustomerDTO> getCustomers() {
+        return customerService.getCustomers().stream()
+                .map(CustomerDTO::fromCustomer)
+                .toList();
+    }
 
-	@GetMapping("/customers/{customerId}")
-	public CustomerDTO getCustomer(@PathVariable int customerId) {
-		return CustomerDTO.fromCustomer(customerService.getCustomer(customerId));
-	}
+    @GetMapping("/customers/{customerId}")
+    public CustomerDTO getCustomer(@PathVariable int customerId) {
+        return CustomerDTO.fromCustomer(customerService.getCustomer(customerId));
+    }
 
-	@PostMapping("/customers")
-	public CustomerDTO saveCustomer(@RequestBody Customer theCustomer) {
-		customerService.saveCustomer(theCustomer);
-		return CustomerDTO.fromCustomer(theCustomer);
-	}
+    @PostMapping("/customers")
+    public CustomerDTO saveCustomer(@RequestBody Customer theCustomer) {
+        customerService.saveCustomer(theCustomer);
+        return CustomerDTO.fromCustomer(theCustomer);
+    }
 
-	@PutMapping("/customers")
-	public CustomerDTO updateCustomer(@RequestBody Customer theCustomer) {
-		customerService.saveCustomer(theCustomer);
-		return CustomerDTO.fromCustomer(theCustomer);
-	}
+    @PutMapping("/customers")
+    public CustomerDTO updateCustomer(@RequestBody Customer theCustomer) {
+        customerService.saveCustomer(theCustomer);
+        return CustomerDTO.fromCustomer(theCustomer);
+    }
 
-	@DeleteMapping("/customers/{customerId}")
-	public String deleteCustomer(@PathVariable int customerId) {
-		customerService.deleteCustomer(customerId);
-		return "Delete customer ID " + customerId;
-	}
+    @DeleteMapping("/customers/{customerId}")
+    public String deleteCustomer(@PathVariable int customerId) {
+        customerService.deleteCustomer(customerId);
+        return "Delete customer ID " + customerId;
+    }
 
 }
